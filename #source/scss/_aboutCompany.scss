@@ -1,0 +1,122 @@
+.content {
+
+	&__about-company {
+		p{
+			padding: 0 20px;
+			line-height: 1.5;
+		}
+	}
+	&__img-article{
+		margin-right: 20px;
+		border-radius: 10px;
+		overflow: hidden;
+		height: 280px;
+	}
+	&__article {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	&__text {
+		max-width: 585px;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 1.25;
+		letter-spacing: -0.48px;
+		color: #91918f;
+	}
+
+	&__infographics {
+		margin: 50px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__infographics-line {
+		width: 1025px;
+		height: 4px;
+		background: linear-gradient(to right, #ffffff 0% , #efc02f 50%, #ffffff);
+	}
+
+	&__infographics-data {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		max-width: 100%;
+		min-width: 100%;
+		margin: -7px auto 0 auto;
+	}
+
+	&__infographics-group {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		p{
+			display: block;
+			font-size: 14px;
+			font-weight: bold;
+			line-height: 1.43;
+			letter-spacing: -0.42px;
+			color: #706f6b;
+			padding-top: 15px;
+		}
+		span{
+			font-size: 40px;
+			font-weight: bold;
+			line-height: 0.5;
+			letter-spacing: -1.2px;
+			color: #2f302e;
+		}
+	}
+}
+.item-infographics {
+
+	&__circle {
+		width: 11px;
+		height: 11px;
+		background: #efc02f;
+		border-radius: 50%;
+	}
+}
+@media(max-width: 992px){
+	.content{
+		&__article {
+			flex-wrap: wrap;
+			justify-content: center;
+			p{
+				line-height: 1.3;
+				padding: 0 10px;
+			}
+			img{
+				width: 100%;
+				height: 250px;
+			}
+		}
+		&__img-article{
+			margin: 15px 0;
+			height: 250px;
+		}
+		&__text{
+			max-width: none;
+		}
+		&__infographics {
+			margin: 10px 0;
+		}
+	}
+}
+@media(max-width: 520px){
+	.content{
+		&__article {
+			img{
+				width: 300px;
+				height: auto;
+			}
+		}
+		&__img-article{
+			height: 200px;
+		}
+	}
+}

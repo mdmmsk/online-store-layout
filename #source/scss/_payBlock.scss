@@ -1,0 +1,62 @@
+.content{
+	&__interactive-block2{
+		display: flex;
+		justify-content: space-around;
+		padding-bottom: 20px;
+	}
+	&__payblock-lists{
+		padding:  0 20px;
+	}
+	&__pay-item{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 20px 0;
+	}
+	&__payblock-list{
+		display: block;
+		
+	}
+	&__payblock-item span{
+		font-weight: bold;	
+	}
+	&__payblock-item{
+		max-width: none;
+	}
+	&__payblock-title{
+		font-size: 16px;
+		color: rgb(27, 27, 27);
+		font-weight: bold;	
+	}
+	&__payblock-text{
+		max-width: none;
+	}
+	&__payblock-text span{
+		color: rgb(27, 27, 27);
+		font-weight: bold;	
+	}
+	&__payblock-list-item{
+		margin: 15px 0;
+	}
+}
+
+@media(max-width: 992px) {
+	.content{
+		&__payblock-title{
+			text-align: center;
+		}
+		&__payblock-list{
+			font-size: 14px;
+		}
+		&__payblock-text{
+			padding: 0 20px;
+		}
+	}
+}
+@media(max-width: 767px) {
+	.content{
+		&__interactive-block2{
+			flex-direction: column;
+		}
+	}
+}

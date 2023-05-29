@@ -1,0 +1,103 @@
+.content {
+  &__delivery {
+  }
+
+  &__title {
+  }
+
+  &__delivery-block-info {
+  }
+  &__containership,
+  &__cran,
+  &__manipulator {
+    height: 180px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  &__containership {
+    background: url("./img/conteynerovoz.png") no-repeat left;
+  }
+  &__manipulator {
+    background: url("./img/manipulyator.png") no-repeat right;
+  }
+  &__cran {
+    background: url("./img/cran.png") no-repeat left;
+  }
+}
+.delivery-block {
+  &__title {
+    display: block;
+  }
+}
+.delivery {
+  &__item {
+  }
+}
+.item-continership {
+}
+.item-delivery {
+  &__title {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.18px;
+    color: #2f302e;
+  }
+
+  &__info {
+    padding-top: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12px;
+    color: #2f302e;
+    span:first-child {
+      color: #efc02f;
+    }
+    span:last-child {
+      font-size: 13px;
+      font-weight: 700;
+    }
+    li {
+      padding: 8px 0;
+    }
+  }
+}
+.item-manipulator {
+}
+@media (max-width: 992px) {
+  .content__containership {
+    background-size: 200px auto;
+  }
+  .content__manipulator {
+    background-size: 230px auto;
+  }
+  .content__cran {
+    background-size: 200px auto;
+  }
+}
+@media (max-width: 767px) {
+  .content {
+    &__containership {
+      background-size: 200px auto;
+      background-position: 50% 45%;
+    }
+    &__manipulator {
+      background-size: 230px auto;
+      background-position: 50% 45%;
+    }
+    &__cran {
+      background-size: 200px auto;
+      background-position: 50% 45%;
+    }
+    &__containership,
+    &__cran,
+    &__manipulator {
+      height: auto;
+      margin: 20px 0;
+    }
+  }
+  .item-delivery__info {
+    padding-top: 150px;
+  }
+}

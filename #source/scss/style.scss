@@ -1,0 +1,57 @@
+@import "_nullstyle";
+@font-face {
+	font-family: 'Gilroy';
+	src: local('Gilroy Bold'), url('/fonts/Gilroy-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Gilroy';
+	src: local('Gilroy Medium'), url('/fonts/Gilroy-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Gilroy';
+	src: local('Gilroy Semibold'), url('/fonts/Gilroy-Semibold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+
+body{
+	font-family: 'Gilroy';
+}
+.wrapper{
+	position: relative;
+	overflow-x: hidden;
+}
+.container{
+	max-width: 1170px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	overflow-x: hidden;
+}
+@media(max-width: 767px) {
+	.container{
+		max-width: none;
+	}
+}
+@import "_headerstyle";
+@import "_mainstyle";
+@import "_footerstyle";
+@media(max-width: 1200px) {
+	.container{
+		max-width: 970px;
+	}
+}
+@media(max-width: 992px) {
+	.container{
+		max-width: 750px;
+	}
+	.content__text{
+		font-size: 14px;
+	}
+	
+}
+

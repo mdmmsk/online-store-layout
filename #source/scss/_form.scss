@@ -1,0 +1,127 @@
+.content {
+	&__close-btn{
+		cursor: pointer;
+		padding: 5px;
+	}
+	&__message-display{
+		color: red;
+		padding-left: 10px;
+	}
+	&__form-background{
+		display: none;
+		justify-content: center;
+		width: 100vw;
+		height: 100vh;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: rgba(0, 0, 0, 0.57);
+		overflow-y: hidden;
+		z-index: 10;
+	}
+	&__feedback-form{
+		align-items: center;
+		flex: none;
+		margin: 0 0 0 -21px;
+	}
+	&__block{
+		border: solid 2px #efc02f;
+		background: rgb(255, 255, 255);
+		border-radius: 10px;
+		display: flex;
+		flex-direction: column;
+		padding: 0 10px;
+	}
+	&__form-button{
+		position: inherit;
+		margin: 10px auto;
+	}
+	&__form-title {
+		padding: 5px 0 0 10px;
+		font-size: 24px;
+		font-weight: bold;
+		color: #2f302e;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	&__form-inputs{
+		max-width: 290px;
+		margin: 10px auto;
+	}
+	&__form-phone{
+		display: flex;
+		justify-content: center;
+    margin-top: 20px;
+    padding: 0 10px;
+	}
+	&__input-radio{
+		margin-top: 20px;
+		display: flex;
+		flex-direction: row;
+		p{
+			padding-left: 10px;
+		}
+	}
+	&__input-radio input{
+		margin-left: 50px;
+	}
+	&__radio-block{
+		display: flex;
+		flex-direction: row;
+	}
+
+	&__input-name,
+	&__input-email,
+	&__input-number {
+		border-bottom: 1px solid #6f6f6b;
+		width: 290px;
+		display: block;
+		margin-top: 20px;
+		letter-spacing: 2px;
+		padding-left: 10px;
+		color: #2f302e;
+	}
+	&__input-name::placeholder,
+	&__input-email::placeholder,
+	&__input-number::placeholder,
+	textarea::placeholder {
+		letter-spacing: 2px;
+	}
+	#textarea{
+		border: 1px solid #6f6f6b;
+		border-radius: 10px;
+		width: 290px;
+		height: 130px;
+		margin-top: 20px;
+		padding-left: 10px;
+	}
+}
+.feedback__close-btn{
+		margin-right: 5px;
+		width: 15px;
+		height: 2px;
+	&::before{
+		content: "";
+		display: block;
+		width: 15px;
+		height: 2px;
+		bottom: 0px;
+		left:0px;
+	}
+}
+@media(max-width: 992px){
+	.content__form-inputs{
+		textarea{
+			height: 163px;
+		}
+	}
+}
+@media(max-width: 767px){
+	.content{
+		&__form{
+			margin-top: 20px;
+			align-self: center;
+		}
+	}
+}

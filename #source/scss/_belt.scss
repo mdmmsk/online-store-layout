@@ -1,0 +1,107 @@
+.content {
+
+	&__belt {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		height: 86px;
+		padding: 5px;
+	
+		input{
+			width: 220px;
+			height: 35px;
+			border-radius: 10px;
+			border: solid 1px #efc02f;
+			background: rgb(255, 255, 255);
+		}
+		button{
+			width: 204px;
+			height: 35px;
+			border-radius: 10px;
+			background: #efc02f;
+
+			font-size: 12px;
+			font-weight: 700;
+			color: #2f302e;
+		}
+		&_input-name {
+			letter-spacing: 2px;
+			padding-left: 10px;
+		}
+
+		&_input-number {
+			letter-spacing: 2px;
+			padding-left: 10px;
+		}
+	}
+	&__belt-form{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		flex: 0 1 60%;
+	}
+	&__belt-contacts{
+		display: flex;
+		flex: 0 1 40%;
+		align-items: center;
+		justify-content: space-around;
+		li{
+			display: flex;
+			flex-direction: row;
+		}
+		p{
+			font-size: 16px;
+			font-weight: bold;
+			letter-spacing: -0.16px;
+			color: #000;
+			padding: 0 0 0 10px;
+		}
+	}
+}
+.belt-contacts__last{
+	padding-left: 20px;
+}
+@media(max-width: 1200px){
+	.content__belt-form{
+		flex:  0 1 100%;
+	}
+	.content__belt-contacts{
+		flex:  0 1 50%;
+	}
+	.content__belt{
+		justify-content: center;
+	}
+}
+@media(max-width: 992px){
+	.content{
+		&__belt-form{
+		}
+		&__belt {
+			input{
+				width: 250px;
+			}
+		}
+	}
+}
+@media(max-width: 767px){
+	.content{
+		&__belt-form{
+			flex-direction: column;
+			height: 125px;
+		}
+		&__belt {
+			height: auto;
+			padding: 10px 0;
+		}
+		&__belt-contacts{
+			flex-wrap: wrap;
+			padding-top: 5px;
+			// flex:  1 1 50%;
+			li{
+				padding: 0;
+				margin-top: 10px;
+			}
+		}
+	}
+}

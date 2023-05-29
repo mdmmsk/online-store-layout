@@ -1,0 +1,242 @@
+.main-header {
+	display: block;
+	background: rgb(255, 255, 255);
+	position: fixed;
+	width: 100%;
+	top: 0px;
+	left: 0px;
+	z-index: 10;
+	&__top {
+		display: flex;
+		p{
+			font-size: 18px;
+			font-weight: 700;
+			color: #2f302e;
+		}
+		div{
+			font-size: 12px;
+			font-weight: 500;
+			color: #706f6b;
+		}
+	}
+	&__menu-nav{
+		position: relative;
+		width: 50px;
+		background: #eed469;
+		display: flex;
+		justify-content: center;
+		padding-right: 8px;
+		span{
+			display: block;
+			position: absolute;
+			top: 24px;
+			width:20px;
+			height: 2.5px;
+			background: rgb(53, 53, 53);
+		}
+		span::before{
+			content: "";
+			display: block;
+			position: absolute;
+			top: 8px;
+			width:27px;
+			height: 2.5px;
+			background: rgb(53, 53, 53);
+		}
+		span::after{
+			content: "";
+			display: block;
+			position: absolute;
+			top: -8px;
+			width: 30px;
+			height: 2.5px;
+			background: rgb(53, 53, 53);
+		}
+	}
+	&__menu-nav_open{
+		span{
+			top: 25px;
+			left: 15px;
+			width:20px;
+			height: 2px;
+			transform: rotate(45deg);
+		}
+		span::before{
+			content: "";
+			top: 1px;
+			width:20px;
+			height: 2px;
+			transform: rotate(-90deg);
+		}
+		span::after{
+			display: none;
+		}
+	}
+	&__text{
+		padding-left: 16px;
+	}
+	&__logo {
+		display: flex;
+		flex: 1 1 50%;
+	}
+	&__company-name{
+		display: inline-block;
+		p{
+			display: inline;
+			letter-spacing: 1.08px;
+		}
+	}
+	&__logo-text{
+		padding-left: 16px;
+		text-align: left;
+		display: flex;
+		flex-direction:column;
+		justify-content:center;
+	}
+	&__info{
+		display: flex;
+		flex-direction:row;
+		align-items:center;
+		flex: 1 1 25%;
+	}
+	&__working-mode {
+		section div{
+			letter-spacing: -0.12px;
+		}
+		section p{
+			letter-spacing: -0.18px;
+			text-align: center;
+		}
+	}
+	&__icon{
+		width: 25px;
+		height: 25px;
+	}
+	&__icon:hover{
+		cursor: pointer;
+	}
+	&__navigation {
+		position: fixed;
+		top: 46px;
+		width: 100%;
+		z-index: 10;
+		display: block;
+		ul{
+			display: flex;
+			padding: 10px 0 20px 0;
+			li{
+				cursor: pointer;
+				z-index: 1;
+			}
+			li :hover{
+				color: #efc02f;
+			}
+			a{
+				font-size: 14px;
+				font-weight: 600;
+				letter-spacing: 0.42px;
+				color: #2f302e;
+				margin-right: 16px;
+			}
+			& :first-child a{
+				color: #efc02f;
+			}
+		}
+	}
+	&__popup-navigation {
+		display: block;
+		width: 100%;
+		position: fixed;
+		top: 53px;
+		z-index: 10;
+		ul{
+			flex-direction: column;
+			justify-content: center;
+			text-align: center;
+			width: 100%;
+			background: white;
+			li{
+				a{
+					display: block;
+					padding: 10px 0;
+				}
+			}
+			li:first-child::before{
+				content: "";
+				display: block;
+				width: 100%;
+				height: 1px;
+				background: linear-gradient(to right, #ffffff 0% , #efc02f 10%, #efc02f 80%,#ffffff 100%);
+			}
+			li::after{
+				content: "";
+				display: block;
+				width: 100%;
+				height: 1px;
+				background: linear-gradient(to right, #ffffff 0% , #efc02f 10%, #efc02f 80%,#ffffff 100%);
+			}
+			li :hover{
+				background: linear-gradient(to right, #ffffff 0% , #f3f3f3 10%, #f3f3f3 80%,#ffffff 100%);
+			}
+		}
+	}
+}
+#feedback:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
+@media(max-width: 992px) {
+	.main-header {
+		&__logo-text{
+			padding-left: 10px;
+		}
+		&__logo {
+			flex: 1 1 40%;
+		}
+		&__navigation ul a{
+			margin-right: 20px;
+		}
+	}
+}
+@media(max-width: 750px) {
+	.main-header {
+		&__top {
+			display: flex;
+			top: 0;
+			p{
+				font-size: 16px;
+				font-weight: 700;
+				color: #2f302e;
+			}
+		}
+		&__info{
+			flex: 1 1 auto;
+			padding: 3px 0;
+		}
+		&__logo-subtext{
+			display: none;
+		}
+		&__text{
+			padding-left: 16px;
+		}
+		&__logo {
+			flex: 1 1 auto;
+			flex-direction: row-reverse;
+			justify-content: start;
+			padding: 3px 0;
+		}
+		&__logo-text{
+			p{
+				display: block;
+				text-align: right;
+			}
+			p{
+				margin-top: -5px;
+			}
+		}
+		&__navigation{
+			display: none;
+		}
+	}
+}
+

@@ -1,0 +1,7 @@
+.parcel-cache
+.vscode
+node_modules
+send.php
+swipebox-master
+dist
+favicons
